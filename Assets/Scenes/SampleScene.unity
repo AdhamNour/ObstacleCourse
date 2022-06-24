@@ -427,11 +427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24bbb4ad1addba644af4a08a1269f8aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  accumlatedTime: 0
-  HorizontalRadius: 1
-  VerticalRadius: 1
-  HorizontalSpeed: 1
-  VirticalSpeed: 1
+  Speed: 10
 --- !u!65 &1491275876
 BoxCollider:
   m_ObjectHideFlags: 0
