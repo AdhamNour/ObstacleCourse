@@ -9,6 +9,7 @@ public class Mover : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("this is the start of the Mover Script");
     }
 
     // Update is called once per frame
