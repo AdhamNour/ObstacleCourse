@@ -4,21 +4,27 @@ using UnityEngine;
 
 public class Dropper : MonoBehaviour
 {
-    [SerializeField] private int timeInterval=3;
+    [SerializeField] private int timeInterval = 3;
+
+    MeshRenderer renderer;
+    Rigidbody body;
     // Start is called before the first frame update
     void Start()
     {
-        
+        renderer = GetComponent<MeshRenderer>();
+        body = GetComponent<Rigidbody>();
+        renderer.enabled = false;
+        body.useGravity = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        int currentTime= (int) Time.time;
-        if(currentTime%3==0){
-
-            Debug.Log(""+timeInterval+" seconds have just passed");
-            Debug.Log("time is"+currentTime);
+        if (Time.time > 3)
+        {
+            renderer.enabled = true;
+            body.useGravity = true;
         }
+
     }
 }

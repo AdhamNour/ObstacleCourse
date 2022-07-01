@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class Scorer : MonoBehaviour
 {
-    int score=0;
-    private void OnCollisionEnter(Collision other) {
-        score++;
-        Debug.Log("Score: " + score.ToString());
+    int score = 0;
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag != "Hitted")
+        {
+            {
+                score++;
+                Debug.Log("Score: " + score.ToString());
+            }
+        }
     }
 }
