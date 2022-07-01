@@ -9,4 +9,8 @@ public class ObjectHit : MonoBehaviour
         Debug.Log("ObjectHit: " + other.ToString());
         GetComponent<MeshRenderer>().material.color = Color.red;
     }
+    private void OnCollisionExit(Collision other) {
+        GetComponent<MeshRenderer>().material.color = Color.white;
+        
+    }
 }
